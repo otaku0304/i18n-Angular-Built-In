@@ -9,6 +9,14 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-us",
+        "locales": {
+          "nl": "src/translate/messages.nl.xlf",
+          "sr": "src/translate/messages.sr.xlf",
+          "en": "src/translate/messages.en.xlf"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -23,11 +31,27 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
           },
           "configurations": {
+            "nl": {
+              "localize": [
+                "nl"
+              ]
+            },
+            "sr": {
+              "localize": [
+                "sr"
+              ]
+            },
+            "en": {
+              "localize": [
+                "en"
+              ]
+            },
             "production": {
               "budgets": [
                 {
@@ -68,12 +92,21 @@
             },
             "development": {
               "browserTarget": "test3:build:development"
+            },
+            "nl": {
+              "browserTarget": "test3:build:nl"
+            },
+            "sr": {
+              "browserTarget": "test3:build:sr"
+            },
+            "en": {
+              "browserTarget": "test3:build:en"
             }
           },
           "defaultConfiguration": "development"
         },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
+        "extract-translate": {
+          "builder": "@angular-devkit/build-angular:extract-translate",
           "options": {
             "browserTarget": "test3:build"
           }
@@ -90,6 +123,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -97,5 +131,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
