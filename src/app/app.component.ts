@@ -27,4 +27,12 @@ export class AppComponent  {
       this.siteLanguage = selectedLanguage;
     }
   }
+
+  localesList: any =[
+    {code: 'en', label: 'English'},
+    {code: 'te', label: 'తెలుగు'},
+    {code: 'nl', label: 'nederlands'},
+    {code: 'urd', label: 'اردو'},
+    {code: 'sr', label: 'Српски'},
+  ] 
 }
