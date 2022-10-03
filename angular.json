@@ -77,9 +77,9 @@
             },
             "sr": {
               "localize": ["sr"],
-              "outputPath": "dist/nl",
+              "outputPath": "dist/sr",
               "i18nMissingTranslation": "error",
-              "baseHref": "/nl/"
+              "baseHref": "/sr/"
             },
             "development": {
               "buildOptimizer": false,
