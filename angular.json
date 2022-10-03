@@ -64,22 +64,15 @@
               "outputHashing": "all"
             },
             "en": {
-              "localize": ["en"],
-              "outputPath": "dist/en",
-              "i18nMissingTranslation": "error",
-              "baseHref": "/en/"
+              "localize": ["en"]        
             },
             "nl": {
-              "localize": ["nl"],
-              "outputPath": "dist/nl",
-              "i18nMissingTranslation": "error",
-              "baseHref": "/nl/"
+              "localize": ["nl"]
+              
             },
             "sr": {
-              "localize": ["sr"],
-              "outputPath": "dist/sr",
-              "i18nMissingTranslation": "error",
-              "baseHref": "/sr/"
+              "localize": ["sr"]
+              
             },
             "development": {
               "buildOptimizer": false,
