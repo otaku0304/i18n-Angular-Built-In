@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent  {
 
   siteLanguage : string ='English';
-  
+  siteLocale = 'en';
 
   languageList = [
     { code: 'en', label : 'English' }, 
@@ -16,6 +16,15 @@ export class AppComponent  {
     { code: 'sr', label : 'Serbian'},
   ]
 
-  constructor(){}
+  ngOnInit() {
+    this.siteLocale = window.location.pathname.split('/')[1];
 
+    const selectedLanguage = this.languageList
+      .find((language) => language.code === this.siteLocale)
+      ?.label.toString();
+
+    if (selectedLanguage) {
+      this.siteLanguage = selectedLanguage;
+    }
+  }
 }
