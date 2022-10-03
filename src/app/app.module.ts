@@ -12,7 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FeedbackComponent } from './feedback/feedback.component';
-
+import {MatFormFieldModule} from '@angular/material/form-field';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +29,8 @@ import { FeedbackComponent } from './feedback/feedback.component';
     MatIconModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    FormsModule
+    FormsModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

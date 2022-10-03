@@ -1,4 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { hasFlag } from 'country-flag-icons';
+
+hasFlag('NL') === true
+
+import { countries } from 'country-flag-icons';
+
+countries.includes('NL') === true
+
 
 @Component({
   selector: 'app-navbar',
