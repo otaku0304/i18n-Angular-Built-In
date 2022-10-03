@@ -10,11 +10,16 @@
       "sourceRoot": "src",
       "prefix": "app",
       "i18n": {
-        "sourceLocale": "en-us",
         "locales": {
-          "nl": "src/translate/messages.nl.xlf",
-          "sr": "src/translate/messages.sr.xlf",
-          "en": "src/translate/messages.en.xlf"
+          "en": {
+            "translation": "src/translate/messages.en.xlf"
+          },
+          "nl": {
+            "translation": "src/translate/messages.nl.xlf"
+          },
+          "sr": {
+            "translation": "src/translate/messages.sr.xlf"
+          }
         }
       },
       "architect": {
@@ -37,21 +42,6 @@
             "scripts": []
           },
           "configurations": {
-            "nl": {
-              "localize": [
-                "nl"
-              ]
-            },
-            "sr": {
-              "localize": [
-                "sr"
-              ]
-            },
-            "en": {
-              "localize": [
-                "en"
-              ]
-            },
             "production": {
               "budgets": [
                 {
@@ -72,6 +62,15 @@
                 }
               ],
               "outputHashing": "all"
+            },
+            "en": {
+              "localize": ["en"]
+            },
+            "nl": {
+              "localize": ["nl"]
+            },
+            "sr": {
+              "localize": ["sr"]
             },
             "development": {
               "buildOptimizer": false,
