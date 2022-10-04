@@ -13,6 +13,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { LOCALE_ID } from '@angular/core';
+import {HashLocationStrategy, Location, LocationStrategy} from '@angular/common';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +35,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     FormsModule,
     MatFormFieldModule
   ],
-  providers: [],
+  providers: [ [Location, {provide: LocationStrategy, useClass: HashLocationStrategy}],
+  { provide: LOCALE_ID, useValue: 'nl' },
+  { provide: LOCALE_ID, useValue: 'en' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
