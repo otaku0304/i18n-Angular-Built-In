@@ -11,14 +11,13 @@
       "prefix": "app",
       "i18n": {
         "locales": {
-          "en": {
-            "translation": "src/translate/messages.en.xlf"
-          },
           "nl": {
-            "translation": "src/translate/messages.nl.xlf"
+            "translation": "src/translate/messages.nl.xlf",
+            "baseHref": "/nl/"
           },
           "sr": {
-            "translation": "src/translate/messages.sr.xlf"
+            "translation": "src/translate/messages.sr.xlf",
+            "baseHref": "/sr/"
           }
         }
       },
@@ -48,7 +47,7 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
+                  "maximumWarning": "2mb",
                   "maximumError": "1mb"
                 },
                 {
@@ -65,16 +64,15 @@
               ],
               "outputHashing": "all"
             },
-            "en": {
-              "localize": ["en"]        
-            },
             "nl": {
-              "localize": ["nl"]
-              
+              "localize": [
+                "nl"
+              ]
             },
             "sr": {
-              "localize": ["sr"]
-              
+              "localize": [
+                "sr"
+              ]
             },
             "development": {
               "buildOptimizer": false,
@@ -101,9 +99,6 @@
             },
             "sr": {
               "browserTarget": "test3:build:sr"
-            },
-            "en": {
-              "browserTarget": "test3:build:en"
             }
           },
           "defaultConfiguration": "development"

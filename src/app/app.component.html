@@ -1,35 +1,35 @@
-
 <ng-container>
-  
   <div class="justify-content-between">
     <button>
       <a class="nav-bar-item" routerLink="/home">Home</a>
     </button>
-  </div>
+
     <button>
       <a class="nav-bar-item" routerLink="/about">About</a>
     </button>
-    <mat-icon>language</mat-icon>
+    <button>
+      <a class="nav-bar-item" routerLink="/feedback">feedback</a>
+    </button>
+    <button>
+      <a class="nav-bar-item" routerLink="/not-found">not-found</a>
+    </button>
+
+    <mat-icon class="mx-2">language</mat-icon>
     <button mat-button [matMenuTriggerFor]="menu">
-       {{ siteLanguage }}
-       <mat-icon>arrow_drop_down</mat-icon>
+      {{ siteLanguage }}
+      <mat-icon>arrow_drop_down</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
-      <a mat-menu-item href="/en/">English</a>
+      <a mat-menu-item href="/en-US/">English</a>
       <a mat-menu-item href="/nl/">Dutch</a>
       <a mat-menu-item href="/sr/">Serbian</a>
     </mat-menu>
- 
+  </div>
 </ng-container>
 
-<div class="mt-5">
+<div>
   <h1 i18n>Hello World!</h1>
 </div>
 
 
-  <ul>
-    <li *ngFor="let locale of localesList">
-        <a href="/{{locale.code}}/">{{locale.label}}</a>
-    </li>
-
-
+<router-outlet></router-outlet>

@@ -8,12 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent  {
 
   siteLanguage : string ='English';
-  siteLocale = 'en';
+  siteLocale = 'en-US';
 
   languageList = [
-    { code: 'en', label : 'English' }, 
+    { code: 'en-US', label : 'English' }, 
     { code: 'nl', label : 'Netherlands'},
     { code: 'sr', label : 'Serbian'},
+    
   ]
 
   ngOnInit() {
@@ -28,11 +29,4 @@ export class AppComponent  {
     }
   }
 
-  localesList: any =[
-    {code: 'en', label: 'English'},
-    {code: 'te', label: 'తెలుగు'},
-    {code: 'nl', label: 'nederlands'},
-    {code: 'urd', label: 'اردو'},
-    {code: 'sr', label: 'Српски'},
-  ] 
 }

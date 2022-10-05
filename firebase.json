@@ -8,9 +8,20 @@
     ],
     "rewrites": [
       {
-        "source": "**",
-        "destination": "/index.html"
+        "source": "/nl/**",
+        "destination": "/nl/index.html"
+      },
+      {
+        "source": "/en/**",
+        "destination": "/en/index.html"
+      },
+      {
+        "source": "/sr/**",
+        "destination": "/sr/index.html"
       }
-    ]
+    ],
+    "i18n": {
+      "root": "/"
+    }
   }
 }
