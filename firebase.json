@@ -8,20 +8,12 @@
     ],
     "rewrites": [
       {
-        "source": "/nl/**",
+        "source": "**",
         "destination": "/nl/index.html"
-      },
-      {
-        "source": "/en/**",
-        "destination": "/en/index.html"
-      },
-      {
-        "source": "/sr/**",
-        "destination": "/sr/index.html"
       }
-    ],
-    "i18n": {
-      "root": "/"
+     
+    ],"i18n": {
+      "root": "/localized-files"
     }
   }
 }

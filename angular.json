@@ -25,7 +25,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "localize": true,
             "aot": true,
             "outputPath": "dist/test3",
             "index": "src/index.html",
