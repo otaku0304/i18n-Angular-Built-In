@@ -8,6 +8,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { HashLocationStrategy, Location, LocationStrategy } from '@angular/common';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     FormsModule,
     MatFormFieldModule
   ],
-  providers: [],
+  providers: [[Location, { provide: LocationStrategy, useClass: HashLocationStrategy }],
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
